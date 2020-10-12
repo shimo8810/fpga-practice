@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1.1 (64-bit)
+# SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
+# IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
+# Start of session at: Mon Oct 12 11:34:22 2020
+# Process ID: 11980
+# Current directory: C:/Users/shimo/workspace/fpga/basys3/projects/fpga-practice/adder/adder.runs/impl_1
+# Command line: vivado.exe -log adder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source adder.tcl -notrace
+# Log file: C:/Users/shimo/workspace/fpga/basys3/projects/fpga-practice/adder/adder.runs/impl_1/adder.vdi
+# Journal file: C:/Users/shimo/workspace/fpga/basys3/projects/fpga-practice/adder/adder.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source adder.tcl -notrace

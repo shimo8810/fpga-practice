@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"adder_test_time_impl.v" \
+"../../../../../adder.srcs/sim_1/new/addet_test.v" \
+
+# Do not sort compile order
+nosort
