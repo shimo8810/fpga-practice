@@ -13,12 +13,14 @@ module cpu(
   REGS next;
   
   decoder decoder(
+    .ctrl,
     .data(mem.data),
     .opecode,
     .imm
   );
   
   alu alu(
+    .ctrl,
     .opecode,
     .imm,
     .in(io.switch),
