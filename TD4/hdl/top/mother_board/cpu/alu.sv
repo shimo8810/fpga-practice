@@ -30,7 +30,8 @@ module alu(
         ADD_B_IMM:  next <= add_b_imm(cur, imm);
         JMP_IMM:    next <= jmp_imm(cur, imm);
         JNC_IMM:    next <= jnc_imm(cur, imm);
-        INVALID:    next <= nop(cur);
+        NOP:        next <= nop(cur);
+        INVALID:    next <= cur;
       endcase
     end
   end

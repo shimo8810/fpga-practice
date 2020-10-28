@@ -9,12 +9,21 @@ module cpu(
 
   OPECODE opecode;
   logic [3:0] imm;
+  logic [7:0] data;
+  logic [3:0] delay_ip;
   REGS cur;
   REGS next;
   
+  fetch fetch(
+    .ctrl,
+    .mem,
+    .ip(delay_ip),
+    .data
+  );
+  
   decoder decoder(
     .ctrl,
-    .data(mem.data),
+    .data,
     .opecode,
     .imm
   );
@@ -34,7 +43,17 @@ module cpu(
     .cur
   );
   
-  assign io.led = cur.out;
-  assign mem.addr = cur.ip;
+  logic cnt;
+  always_ff @(posedge ctrl.clk) begin
+    if (ctrl.rst) begin
+      cnt <= 0;
+      delay_ip <= 0;
+    end else begin
+      if (cnt == 1) begin
+        delay_ip <= next.ip;
+      end
+      cnt <= cnt + 1;
+    end
+  end
 
 endmodule

@@ -15,14 +15,14 @@ module test_top();
 
   initial begin
     pin_rst = 1'b1;
-    #10;
+    #23;
     pin_rst = 1'b0;
   end
 
   initial pin_switch = 4'd6;
 
   initial begin
-    #2000;
+    #8000;
     $finish();
   end
 endmodule
